@@ -4,14 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        int num;
+        int num, i = 1;
 
-        do
+        Console.Write("Digite um número inteiro positivo: ");
+        num = int.Parse(Console.ReadLine());
+
+        while (i <= num)
         {
-            Console.Write("DIGITE UM NUMERO ENTRE 1 A 10: ");
-            num = int.Parse(Console.ReadLine());
-        } while (num < 1 || num > 10);
-
-        Console.WriteLine("VOCÊ DIGITOU O NÚMERO " + num + ".");
+            Console.Write(i + " ");
+            i++;
+        }
     }
 }
