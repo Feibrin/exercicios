@@ -1,38 +1,36 @@
 ﻿using System;
 
-namespace Calculator
+class Program
 {
-    class Program
+    static int Soma(int a, int b)
     {
-        static void Main(string[] args)
-        {
-            char op;
-            float num1, num2;
-            Console.Write("ENTRE COM O OPERADOR: +, -, *, /: ");
-            op = Console.ReadLine()[0];
-            Console.Write("ENTRE COM DOIS VALORES: ");
-            string[] values = Console.ReadLine().Split(' ');
-            num1 = float.Parse(values[0]);
-            num2 = float.Parse(values[1]);
+        int resultado = a + b;
+        return resultado;
+    }
 
-            switch (op)
-            {
-                case '+':
-                    Console.WriteLine(num1 + " + " + num2 + " = " + (num1 + num2));
-                    break;
-                case '-':
-                    Console.WriteLine(num1 + " - " + num2 + " = " + (num1 - num2));
-                    break;
-                case '*':
-                    Console.WriteLine(num1 + " * " + num2 + " = " + (num1 * num2));
-                    break;
-                case '/':
-                    Console.WriteLine(num1 + " / " + num2 + " = " + (num1 / num2));
-                    break;
-                default:
-                    Console.WriteLine("OPERADOR ERRADO, ENTRE COM O CORRETO");
-                    break;
-            }
-        }
+    static int Subtracao(int a, int b)
+    {
+        int resultado = a - b;
+        return resultado;
+    }
+
+    static int Multiplicacao(int a, int b)
+    {
+        int resultado = a * b;
+        return resultado;
+    }
+
+    static int Divisao(int a, int b)
+    {
+        int resultado = a / b;
+        return resultado;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine(Soma(30, 5));
+        Console.WriteLine(Subtracao(30, 5));
+        Console.WriteLine(Multiplicacao(30, 5));
+        Console.WriteLine(Divisao(30, 5));
     }
 }
